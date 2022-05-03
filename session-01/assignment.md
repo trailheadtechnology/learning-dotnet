@@ -1,7 +1,7 @@
-* Create a .NET console “Hello world” application using the code below
+* Create a .NET Framework “Hello world” console application using the code below
+```
 using System;
 
-```
 namespace MyConsoleApp
 {
     internal class Program
