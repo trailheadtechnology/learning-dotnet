@@ -1,10 +1,16 @@
-* Open your existing assigmnet-1 project
-* Add a breakpoint to the Console.WriteLine() statement
-* Run the debugger and make sure the breakpoint is hit
-  * Step through your code one line at a time
-* Run the debugger again
-  * Run your application again without stepping
-* Try adding a bookmark and viewing it in the Bookmarks pane
+* Create a console application and use the following base class to define a Cat and Dog class that inherit from it
+ ```
+ public abstract class Animal
+ {
+     public abstract string Talk();
+     public string Feed()
+     {
+         return Talk();
+     }
+ }
+```
+* Implement the Talk() method in each class
+* In the Main method, create dog and cat instances, feed them, and write out the output.
 
-Challenge: Set a conditional breakpoint 
-Challenge: With the debugger paused, view the stack trace 
+Challenge 1: Add a protected field “energy’ to the Animal class. Increment it by 1 every time the cat is fed and 2 every time the dog is fed.
+Challenge 2: Add a method to Animal called GetEnergy() that returns the value of the field energy and output the animals new energy every time you feed them
