@@ -1,0 +1,8 @@
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\bin\Debug\ConsoleApp5.exe.config
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\bin\Debug\ConsoleApp5.exe
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\bin\Debug\ConsoleApp5.pdb
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\obj\Debug\ConsoleApp5.csproj.AssemblyReference.cache
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\obj\Debug\ConsoleApp5.csproj.SuggestedBindingRedirects.cache
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\obj\Debug\ConsoleApp5.csproj.CoreCompileInputs.cache
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\obj\Debug\ConsoleApp5.exe
+C:\Clients\KeHE\learning-dotnet\learning-dotnet\session-02\code\ConsoleApp5\obj\Debug\ConsoleApp5.pdb
