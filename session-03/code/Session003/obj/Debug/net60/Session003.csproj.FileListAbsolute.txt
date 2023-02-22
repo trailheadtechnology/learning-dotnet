@@ -1,0 +1,14 @@
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.csproj.AssemblyReference.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.csproj.CoreCompileInputs.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.exe
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.dll.config
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.deps.json
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.runtimeconfig.json
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\bin\Debug\net60\Session003.pdb
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\refint\Session003.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.pdb
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\Session003.genruntimeconfig.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\code\Session003\obj\Debug\net60\ref\Session003.dll

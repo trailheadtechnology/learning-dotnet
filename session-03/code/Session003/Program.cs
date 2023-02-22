@@ -4,6 +4,9 @@ namespace Session003
 {
     internal class Program
     {
+        //members
+        private int _i; //field
+
         static void Main(string[] args)
         {
             var o = new Sample2();
@@ -18,4 +21,9 @@ namespace Session003
             Console.ReadKey();
         }
     }
+
+    //private - only the current class
+    //protected - current class AND inheritance tree (derived classes)
+    //internal - same project
+    //public - everywhere
 }

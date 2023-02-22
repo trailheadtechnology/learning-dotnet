@@ -8,9 +8,13 @@ namespace Session003
 {
     internal class Sample2
     {
-        public void MethodName()
+        public void MethodName(int i)
         {
-            return; // return control back to the calling method
+            if (i == 0) return; // return control back to the calling method
+
+            //code here
+            // do some math that devides by i
+            var x = 7 / i;
         }
 
         public string MethodName2()
@@ -25,6 +29,14 @@ namespace Session003
             outVal = inVal;
             
             return true;
+        }
+
+        public void NamedParameters(int i, int j = -1, int x = -1, int y = -1)
+        {
+            if (x >= 0)
+            {
+                //logic
+            }
         }
 
         public string VariableNumberOfParams(params string[] arr)
@@ -43,7 +55,10 @@ namespace Session003
         private void Main()
         {
             var o = new Sample2();
-            var combined = o.VariableNumberOfParams("a", "b", "c", "d", "", "");
+            var x = "";
+            var combined = o.VariableNumberOfParams("a", "b", "c", "d", "", "", "", "asdfasdf", x);
+
+            o.NamedParameters(i: 1, y: 4, j: 2);
         }
     }
 }

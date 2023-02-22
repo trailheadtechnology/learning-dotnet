@@ -14,7 +14,7 @@ namespace Session003.Inheritance
         }
     }
 
-    public class Biped
+    public class Biped : Animal
     {
 
     }
@@ -24,7 +24,8 @@ namespace Session003.Inheritance
         string Name { get; set; }  
     }
 
-    public class Person : Animal, INameable//, Biped <-- no multiple inheritance
+    public class Person : Biped, INameable 
+        //, Biped <-- no multiple inheritance
     {
         public string Name { get; set; }  
     }
@@ -52,7 +53,8 @@ namespace Session003.Inheritance
 
             var w = new Worm();
             w.Eat();
-            SayHi(w);
+            //not allowed
+            //SayHi(w);
         }
 
         public void SayHi(INameable nameable)

@@ -8,6 +8,14 @@ namespace Session003
         public string homeTown;
         protected int age; //field
 
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+        }
+
         public Person(int initialAge) //constructor, called when you use "new"
         {
             age = initialAge;
@@ -49,7 +57,7 @@ namespace Session003
             //some other code
             Person mySampleClass2 = new Person(25) { 
                 name = "J. Tower", 
-                homeTown = "Grand Rapids" 
+                homeTown = "Grand Rapids", 
             };
             //some other code
 

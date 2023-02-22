@@ -19,7 +19,15 @@ namespace Session003
         }
         public void Drive()
         {
-            
+
+        }
+    }
+
+    public class Bike : IDriveable
+    {
+        public void Drive()
+        {
+
         }
     }
 
@@ -44,6 +52,12 @@ namespace Session003
 
             var c = new Car();
             DoDrive(c);
+
+            var b = new Bike();
+            DoDrive(b);
+
+            ////not allowed
+            //var i = new IDriveable();
         }
 
         public void DoDrive(IDriveable driveable)
