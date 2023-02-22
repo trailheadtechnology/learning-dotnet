@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "/5wRQL0O1wMsgVOSLl5mjTtRoPQ4veZ6G9/5Wysdoud69F+tkJ7KaE38UQta8X9oBlMoQRaVgodyNKIRShMvHw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\Session003.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jtower\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\jtower\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

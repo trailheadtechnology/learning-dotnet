@@ -7,12 +7,11 @@ namespace assignment_2
         static void Main(string[] args)
         {
             char key = ' ';
+            var d = new Dog();
+            var c = new Cat();
 
             while (key != 'x')
             {
-                var d = new Dog();
-                var c = new Cat();
-
                 Console.WriteLine("Dog says " + d.Feed());
                 Console.WriteLine("Cat says " + c.Feed());
 

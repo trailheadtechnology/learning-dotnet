@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\Session003.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\Session003.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\Session003.csproj",
+        "projectName": "Session003",
+        "projectPath": "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\Session003.csproj",
+        "packagesPath": "C:\\Users\\jtower\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jtower\\OneDrive - Trailhead Technology Partners\\Clients\\Kehe\\learning-dotnet\\public\\session-03\\code\\Session003\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jtower\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net60"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net60",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net60",
+          "dependencies": {
+            "Microsoft.CSharp": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "System.Data.DataSetExtensions": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

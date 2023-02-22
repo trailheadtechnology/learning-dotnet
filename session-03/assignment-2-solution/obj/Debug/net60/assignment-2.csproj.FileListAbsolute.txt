@@ -1,0 +1,14 @@
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.exe
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.dll.config
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.deps.json
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.runtimeconfig.json
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\bin\Debug\net60\assignment-2.pdb
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.csproj.AssemblyReference.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.csproj.CoreCompileInputs.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\refint\assignment-2.dll
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.pdb
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\assignment-2.genruntimeconfig.cache
+C:\Users\jtower\OneDrive - Trailhead Technology Partners\Clients\Kehe\learning-dotnet\public\session-03\assignment-2-solution\obj\Debug\net60\ref\assignment-2.dll
