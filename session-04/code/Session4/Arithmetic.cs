@@ -26,7 +26,7 @@ namespace Session4
             i -= 2;
             i -= j;
 
-            // order of operations?
+            // order of operations - remember PEMDAS?
             i = 10 * 20 + 4;
             i = ((10 * 20) + 4) * 2;
         }

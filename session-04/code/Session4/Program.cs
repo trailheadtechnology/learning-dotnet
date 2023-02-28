@@ -10,6 +10,7 @@ namespace Session4
     {
         static void Main(string[] args)
         {
+            new StructExamples().Main();
         }
     }
 }

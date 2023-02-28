@@ -23,6 +23,7 @@ namespace Session4
         }
     }
 
+    //public class Cooridate
     public struct Cooridate
     {
         public int X;
@@ -44,6 +45,12 @@ namespace Session4
     {
         public void Main()
         {
+            // no constructor
+            Cooridate c;
+            c.X = 1;
+            c.Y = 2;
+
+            // constructor
             var coor = new Cooridate(1, 2);
             if (coor.IsOrigin())
             {
