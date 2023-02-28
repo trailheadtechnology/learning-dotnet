@@ -1,4 +1,4 @@
-* Create a .NET Framework console app
+* Create a .NET console app
 * Prompt the user to input an integer
 * Prompt the user to input another integer
 * Add those integers together and write the result to the output
