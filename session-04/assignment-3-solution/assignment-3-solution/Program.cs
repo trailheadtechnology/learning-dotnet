@@ -43,7 +43,7 @@ namespace assignment_3_solution
                 }
             }
 
-            Console.WriteLine("You win!");
+            Console.WriteLine("You win! The answer was " + answer);
             Console.ReadKey();
         }
     }

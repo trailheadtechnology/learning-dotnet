@@ -14,11 +14,14 @@ namespace Session4
             int j = 2;
 
             int k = i + j;
+            int o = i - j;
+            int l = i / k;
+            int m = i * j;
             //string s = "first part " + "second part";
 
             //increment
             i++; //i = i + 1;
-            i += 2; // i = i +2
+            i += 2; // i = i + 2
             i += j;
 
             //decrement

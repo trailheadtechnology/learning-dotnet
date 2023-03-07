@@ -10,9 +10,29 @@ namespace Session4
     {
         public const string CELCIUS = "c";
         public const string FAHRENHEIT = "f";
+
+        public struct Temperature
+        {
+            public double Temp;
+            public TemperatureScale Scale;
+
+            public Temperature(double temp, TemperatureScale scale)
+            {
+                Temp = temp;
+                Scale = scale;
+            }
+        }
+
+        public void Main()
+        {
+            var temp = new Temperature(35, TemperatureScale.Celcius);
+            var temp2 = new Temperature(35, TemperatureScale.Fahrenheit);
+        }
+
         public enum TemperatureScale
         {
-            Celcius, Fahrenheit
+            Celcius, 
+            Fahrenheit,
         }
 
         public enum UserStatuses : short
@@ -32,11 +52,10 @@ namespace Session4
             return new User();
         }
 
-        public void Main()
+        public void Main2()
         {
-            var converted = ConvertTemp(0.0f, 
-                TemperatureScale.Celcius, 
-                TemperatureScale.Fahrenheit);
+            var t = new Temperature(35, TemperatureScale.Fahrenheit);
+            var t2 = ConvertTo(t, TemperatureScale.Celcius);
 
             var user = GetUserFromDB();
             if (user.Status == UserStatuses.InReview)
@@ -52,17 +71,23 @@ namespace Session4
             //var converted3 = ConvertTemp2(0.0f, "test", "notvalid");
         }
 
-        public float ConvertTemp(float fromValue, TemperatureScale from, TemperatureScale to)
+        public Temperature ConvertTo(Temperature original, TemperatureScale targetScale)
         {
-            // todo
-            return 0.0f;
-        }
+            if (targetScale == original.Scale) return original;
 
-        //public float ConvertTemp2(float fromValue, string from, string to)
-        //{
-        //    // todo
-        //    return 0.0f;
-        //}
+            Temperature newTemp;
+            if (targetScale == TemperatureScale.Fahrenheit)
+            {
+                //do conversion to C
+                newTemp = new Temperature(1, TemperatureScale.Celcius);
+            }
+            else
+            {
+                //do conversion to F
+                newTemp = new Temperature(1, TemperatureScale.Fahrenheit);
+            }
+            return newTemp;
+        }
     }
 
   
