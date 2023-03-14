@@ -20,8 +20,8 @@ namespace assignment_4_solution
                 if (option == 3) return;
 
                 Console.WriteLine(option == 1 ?
-                    "Enter text to convert to Morse code:" :
-                    "Enter Morse code to convert to text:");
+                   "Enter text to convert to Morse code:" :
+                   "Enter Morse code to convert to text:");
 
                 var textToConvert = Console.ReadLine();
 

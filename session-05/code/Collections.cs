@@ -25,12 +25,13 @@ namespace session_05
             List<int> myList = new List<int>() { 1, 3 };
             List<int> myList2 = new List<int>() { 4, 5, 6 };
             myList.Insert(1, 2);
+            //myList.Add(""); //not valid
             myList[1] = 2;
             var myInt = myList[1];
             myList.AddRange(myList2);
             myList.Sort();
 
-            List<string> myListofStrings = new List<string> { "", "" };
+            List<string> myListofStrings = new List<string> { "z", "b" };
             myListofStrings.Sort();
 
             // SortedList
@@ -43,8 +44,10 @@ namespace session_05
             peopleAges["Person 2"] = 44;
             
             // Queue - FIFO (FIRST IN, FIRST OUT)
-            Queue queue = new Queue(); 
+            var queue = new Queue(); 
             queue.Enqueue(1);
+            queue.Enqueue(2);
+            queue.Enqueue(3);
             queue.Dequeue();
             Queue<int> queue1 = new Queue<int>();
             queue1.Enqueue(3);
@@ -61,12 +64,12 @@ namespace session_05
             // Dictionary, SortedDictionary
             Dictionary<int, Person> myDictionary = new Dictionary<int, Person>();
             myDictionary.Add(1, new Person { });
-            //myDictionary[1]
+            myDictionary.ContainsKey(2);
             SortedDictionary<int, Person> keyValuePairs = new SortedDictionary<int, Person>();
 
             // IEnumerable
             // loop over the items in a collection
-            foreach (int i in myList)
+            foreach (var i in myList)
             {
                 // don't change and ienumerable while looping over it
                 //myList.Insert(0, 1);
@@ -75,7 +78,7 @@ namespace session_05
 
         public class Person
         {
-
+            public string Name { get; set; }
         }
     }
 }

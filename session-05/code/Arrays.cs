@@ -13,6 +13,10 @@ namespace session_05
             int[] ints;
             byte[] data = new byte[7000];
             int[] x = { 1, 2, 3 };
+            Array.Resize(ref x, 6);
+            int[] z = new int[6];
+            x.CopyTo(z, 3);
+
             int[] y = { 4, 5, 6 };
             int[] y2 = new int[3];
 
@@ -30,7 +34,7 @@ namespace session_05
             PutMeInAnArray[] putMeInAnArrays;
 
             // arrays can't be changed
-            int[] z = x.Concat(y).ToArray();
+            //int[] z = x.Concat(y).ToArray();
 
             // referencing an array item using index
             var j = x[x.Length - 1];
@@ -48,18 +52,22 @@ namespace session_05
 
     public class PutMeInAnArray
     {
-        public int[] Sort(int[] array)
+        public void Sort()
         {
-            for (int i = 0; i < array.Length; i++)
+            int[,] array = { { 1, 4 }, { 2, 5 }, { 3, 6 } };
+
+            for (int i = 0; i < array.GetLength(0); i++)
             {
-                var item = array[i];
-            }
-            foreach(int item in array)
-            {
-                
+                for (int j = 0; j < array.GetLength(1); i++)
+                {
+                    array[i,j] = 0;
+                }
             }
 
-            return array;
+            foreach (int item in array)
+            {
+                Console.WriteLine(item);   
+            }
         }
     }
 }

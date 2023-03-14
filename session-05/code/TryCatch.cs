@@ -10,48 +10,52 @@ namespace session_05
     {
         public int Method1(int parm, int parm2)
         {
-            if (parm == 0)
-                throw new MyException("Cannot divide by zero");
+            if (parm2 == 0)
+                throw new MyException(nameof(parm2));
 
             return Method2(parm, parm2);
         }
 
         public int Method2(int parm, int parm2)
         {
-            try
-            {
-                return Method3(parm, parm2);
-            }
-            catch (Exception)
-            {
-                throw; // rethrows the Exception
-            }
+            //try
+            //{
+            return Method3(parm, parm2);
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("In Method2");
+            //    throw new Exception("My Own Exception"); // rethrows the Exception
+            //}
         }
 
         public int Method3(int parm, int parm2)
         {
-            try
-            {
-                return parm / parm2;
-            }
-            catch (DivideByZeroException)
-            {
-                // not unusual to log here
-                return 0;
-            }
-            finally
-            {
-                // cleanup, runs no matter what
-                // closing a connection to something (db, internet, etc)
-            }
+            //try
+            //{
+
+            return parm / parm2;
+
+            //}
+            //catch (DivideByZeroException)
+            //{
+            //    // not unusual to log here
+            //    return 0;
+            //}
+            //finally
+            //{
+            //    // cleanup, runs no matter what
+            //    // closing a connection to something (db, internet, etc)
+            //}
         }
     }
 
-    public class MyException: ArgumentException
+    public class MyException : ArgumentException
     {
-        public MyException(string message) : base(message)
+        public string ParamName { get; set; }
+        public MyException(string paramName) : base($"{paramName} is invalid")
         {
-
+            ParamName = paramName;
         }
     }
 }
