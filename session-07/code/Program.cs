@@ -10,8 +10,8 @@ namespace session_07
     {
         static void Main(string[] args)
         {
-            JSONNet.Example();
-
+            //JSONNet.Example();
+            GraphicsExamples.Example();
             //MainAsync().GetAwaiter().GetResult();
 
             Console.ReadKey();
