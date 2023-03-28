@@ -38,7 +38,7 @@ namespace ConwaysGameOfLife
             {
                 for (int j = 0; j < cols; j++)
                 {
-                    grid[i, j] = lines[i][j] == '.' ? State.Dead : State.Alive;
+                    grid[i, j] = (lines[i][j] == '.') ? State.Dead : State.Alive;
                 }
             }
 

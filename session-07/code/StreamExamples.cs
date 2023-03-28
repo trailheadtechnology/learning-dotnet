@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Text;
 
 namespace session_07
 {
@@ -17,6 +18,23 @@ namespace session_07
                     using (FileStream DestinationStream = File.Create(outputFilePath))
                     {
                         SourceStream.CopyTo(DestinationStream);
+                    }
+                }
+            }
+        }
+
+        public static void StreamReaderWriterExample()
+        {
+            using (StreamReader reader = new StreamReader("input.txt"))
+            {
+                using (StreamWriter writer = new StreamWriter("output.txt"))
+                {
+                    // Read each line from the input file
+                    string line;
+                    while ((line = reader.ReadLine()) != null)
+                    {
+                        // Write the line to the output file
+                        writer.WriteLine(line);
                     }
                 }
             }

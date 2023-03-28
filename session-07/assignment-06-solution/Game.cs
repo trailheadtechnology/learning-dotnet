@@ -4,6 +4,9 @@
     {
         private const int COLS = 80;
         private const int ROWS = 24;
+        private const char GERM = '\u2588';
+        private const char EMPTY = ' ';
+      
         private State[,] grid;
 
         public Game(State[,] initialState)
@@ -40,7 +43,7 @@
 
                 grid = ApplyRules(grid);
 
-                Thread.Sleep(100);
+                Thread.Sleep(50);
             }
         }
 
@@ -78,7 +81,7 @@
             {
                 for (var j = 0; j < COLS; j++)
                 {
-                    Console.Write(currentGrid[i, j] == State.Alive ? '\u2588' : ' ');
+                    Console.Write(currentGrid[i, j] == State.Alive ? GERM : EMPTY);
                 }
                 Console.WriteLine();
             }
