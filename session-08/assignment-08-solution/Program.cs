@@ -15,7 +15,7 @@ namespace json_sample
 
         static async Task MainAsync()
         {
-            var result = await WeatherAlerts.GetAlertsAsync();
+            var result = await WeatherAlerts.GetAlertsAsync("FL");
 
             foreach (var alert in result.features)
             {

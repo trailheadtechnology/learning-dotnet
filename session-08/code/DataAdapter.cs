@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.Odbc;
 using System.Data.OleDb;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;

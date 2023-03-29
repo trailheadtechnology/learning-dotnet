@@ -7,7 +7,7 @@ namespace session_08
     {
         static void Main(string[] args)
         {
-            DapperExample.Example();
+            Providers.Example();
         }
     }
 }

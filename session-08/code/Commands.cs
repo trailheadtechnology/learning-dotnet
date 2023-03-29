@@ -1,7 +1,5 @@
-﻿using System;
-using System.Data.Odbc;
-using System.Data.OleDb;
-using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
+using System;
 
 namespace session_08
 {

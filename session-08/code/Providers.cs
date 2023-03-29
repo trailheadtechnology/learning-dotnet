@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Data.Common;
 using System.Data.Odbc;
 using System.Data.OleDb;
@@ -10,7 +11,10 @@ namespace session_08
     {
         public static void Example()
         {
-            var factory = DbProviderFactories.GetFactory("System.Data.SqlClient");
+            DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", SqlClientFactory.Instance);
+            //
+
+            var factory = DbProviderFactories.GetFactory("Microsoft.Data.SqlClient");
             using (DbConnection connection = factory.CreateConnection())
             {
                 connection.ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Integrated Security=SSPI;Initial Catalog=AdventureWorks;";

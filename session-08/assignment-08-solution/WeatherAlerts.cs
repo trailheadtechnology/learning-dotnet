@@ -10,12 +10,12 @@ namespace json_sample
 {
     public static class WeatherAlerts
     {
-        public static async Task<WeatherAlertsDto> GetAlertsAsync()
+        public static async Task<WeatherAlertsDto> GetAlertsAsync(string area)
         {
             using (var client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Add("User-Agent", "(jtower@trailheadtechnology.com)");
-                var response = await client.GetAsync("https://api.weather.gov/alerts/active?area=FL");
+                var response = await client.GetAsync($"https://api.weather.gov/alerts/active?area={area}");
                 var json = await response.Content.ReadAsStringAsync();
                 var dto = JsonConvert.DeserializeObject<WeatherAlertsDto>(json);
 
