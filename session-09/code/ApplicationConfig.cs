@@ -11,13 +11,13 @@ namespace session_09
     {
         public static void Example()
         {
-            var appSetting1 = ConfigurationManager.AppSettings["appSetting1"];
-            Console.WriteLine(appSetting1);
+            //var appSetting1 = ConfigurationManager.AppSettings["appSetting1"];
+            //Console.WriteLine(appSetting1);
             
-            var myConnectionString1 = ConfigurationManager.ConnectionStrings["myConnectionString1"];
-            Console.WriteLine($"{myConnectionString1.ProviderName} {myConnectionString1.ConnectionString}");
+            //var myConnectionString1 = ConfigurationManager.ConnectionStrings["myConnectionString1"];
+            //Console.WriteLine($"{myConnectionString1.ProviderName} {myConnectionString1.ConnectionString}");
 
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }
