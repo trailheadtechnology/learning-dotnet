@@ -17,7 +17,7 @@ namespace session_08
                 {
                     var mem1 = GC.GetTotalMemory(true);
 
-                    using (var reader = cmd.ExecuteReader())
+                    using (var reader = cmd.ExecuteReader()) //SQL executes
                     {
                         var mem2 = GC.GetTotalMemory(true);
 

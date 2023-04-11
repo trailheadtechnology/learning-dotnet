@@ -10,7 +10,7 @@ namespace json_sample
 {
     public static class WeatherAlerts
     {
-        public static async Task<WeatherAlertsDto> GetAlertsAsync(string area)
+        public static async Task<IEnumerable<OutputDTO>> GetAlertsAsync(string area, string filterName)
         {
             using (var client = new HttpClient())
             {
@@ -19,26 +19,26 @@ namespace json_sample
                 var json = await response.Content.ReadAsStringAsync();
                 var dto = JsonConvert.DeserializeObject<WeatherAlertsDto>(json);
 
-                var results = from f in dto.features
-                              where f.properties.description.Contains("ottawa")
-                              //select f.properties.description; // IEnumerable<string>
-                              select new OutputDTO { Description = f.properties.description, Feature = f };
+                //var results = from f in dto.features
+                //              where f.properties.description.Contains(filterName)
+                //              //select f.properties.description; // IEnumerable<string>
+                //              select new OutputDTO { Description = f.properties.description, Feature = f };
 
-                var r2 = from f2 in results
-                         where f2.Feature != null
-                         select new { f2.Description };
+                //var r2 = from f2 in results
+                //         where f2.Feature != null
+                //         select new { f2.Description };
 
                 var results3 = dto.features
-                    .Where(f => f.properties.description.Contains("ottawa"))
-                    .Select(f => new { Description = f.properties.description, Feature = f });
+                    //.Where(f => f.properties.description.Contains(filterName))
+                    .Select(f => new OutputDTO { Description = f.properties.description, Feature = f });
 
-                var dict = new Dictionary<string, OutputDTO>();
-                dict = (from item in dict
-                        orderby item.Value.Description descending
-                        select item).ToDictionary(x => x.Key, x => x.Value);
-                var results5 = dict.OrderByDescending(item => item.Value.Description).Select(item => item);
+                //var dict = new Dictionary<string, OutputDTO>();
+                //dict = (from item in dict
+                //        orderby item.Value.Description descending
+                //        select item).ToDictionary(x => x.Key, x => x.Value);
+                //var results5 = dict.OrderByDescending(item => item.Value.Description).Select(item => item);
 
-                return dto;
+                return results3;
             }
         }
     }

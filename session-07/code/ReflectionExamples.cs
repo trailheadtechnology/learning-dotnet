@@ -16,8 +16,7 @@ namespace session_07
             // Using GetType to obtain type information:
             int i = 42;
             Type type = i.GetType();
-            Console.WriteLine(type);
-            //System.Int32
+            Console.WriteLine(type); //System.Int32
 
             #endregion
 
@@ -25,7 +24,10 @@ namespace session_07
             #region Creating Instances
 
             // create instance of class DateTime
-            DateTime dateTime = (DateTime)Activator.CreateInstance(typeof(DateTime));
+            DateTime dt = DateTime.Now;
+            Type dtType = dt.GetType();
+            var dateTime = Activator.CreateInstance(dtType);
+            //DateTime dateTime = (DateTime)Activator.CreateInstance(typeof(DateTime));
 
             #endregion
 
@@ -40,6 +42,8 @@ namespace session_07
 
             // get value of property: public double Number
             double value = (double)numberPropertyInfo.GetValue(calcInstance, null);
+            //var calc = new Calculator();
+            //var v = calc.Number;
 
             // set value of property: public double Number
             numberPropertyInfo.SetValue(calcInstance, 10.0, null);
@@ -53,10 +57,10 @@ namespace session_07
         public Calculator() {  }
         private double _number;
         public double Number { get; set; }
+        public static double Pi { get => Math.PI; }
         public void Clear() {  }
         private void DoClear() {  }
         public double Add(double number) { return number; }
-        public static double Pi { get => Math.PI; }
         public static double GetPi() { return Pi; }
     }
 }

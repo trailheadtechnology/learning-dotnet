@@ -14,18 +14,19 @@ namespace session_08
 
                 // DON'T DO THIS WITHOUT A WHERE CLAUSE
                 var results = conn.Query<Customer>("SELECT * FROM SalesLT.Customer");
-
+                // => lambda expression, LINQ
                 foreach (var result in results)
                 {
-                    Console.WriteLine(result.Fullname);
+                    Console.WriteLine(result.FullName);
                 }
             }
+
         }
     }
 
     public class Customer
     {
-        public string Fullname {
+        public string FullName {
             get
             {
                 return FirstName + " " + LastName;

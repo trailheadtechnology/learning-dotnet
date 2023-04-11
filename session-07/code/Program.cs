@@ -11,7 +11,7 @@ namespace session_07
         static void Main(string[] args)
         {
             //JSONNet.Example();
-            GraphicsExamples.Example();
+            JSONNet.Example();
             //MainAsync().GetAwaiter().GetResult();
 
             Console.ReadKey();

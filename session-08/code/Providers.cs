@@ -11,7 +11,9 @@ namespace session_08
     {
         public static void Example()
         {
+            // startup
             DbProviderFactories.RegisterFactory("Microsoft.Data.SqlClient", SqlClientFactory.Instance);
+            // other providers here
             //
 
             var factory = DbProviderFactories.GetFactory("Microsoft.Data.SqlClient");

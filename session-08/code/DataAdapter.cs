@@ -22,7 +22,7 @@ namespace session_08
                 using (SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SalesLT.Customer", conn))
                 {
                     var dt = new DataTable();
-                    da.Fill(dt);
+                    da.Fill(dt); //SQL executes
 
                     var mem2 = GC.GetTotalMemory(true);
 
