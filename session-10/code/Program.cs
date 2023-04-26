@@ -10,7 +10,7 @@ namespace session_10
     {
         static void Main(string[] args)
         {
-            TransactionExample.Example();
+            LinqToXml.Example();
             Console.ReadKey();
         }
     }

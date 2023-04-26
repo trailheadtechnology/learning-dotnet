@@ -42,7 +42,7 @@ namespace session_10
                 Console.WriteLine("Accessing student {0}", std.StudentName);
 
                 if (std.Age > 12 && std.Age < 20)
-                    yield return std;
+                    yield return std; //yield - like a return and continue
             }
         }
     }
