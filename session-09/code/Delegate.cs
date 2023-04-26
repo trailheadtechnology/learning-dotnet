@@ -6,7 +6,7 @@ namespace session_09
 {
     public class Delegates
     {
-        public delegate string Reverse(string s);
+        public delegate string Reverse(string originalString);
 
         public static string ReverseString(string s)
         {
@@ -23,8 +23,8 @@ namespace session_09
             Reverse rev = ReverseString;
             Console.WriteLine(rev("a string"));
 
-            Func<string, string> rev2 = ReverseString;
-            Console.WriteLine(rev2("a string"));
+            Func<string, string> func = ReverseString;
+            Console.WriteLine(func("a string"));
         }
 
         public static void EventHandlerExample()
@@ -49,20 +49,20 @@ namespace session_09
             }
 
             // Delgates
-            List<int> result = list.FindAll(
-              delegate (int no)
-              {
-                  return (no % 2 == 0);
-              }
-            );
-
-            // Func
-            //Func<int, bool> func = delegate (int no)
+            //List<int> result = list.FindAll(
+            //  delegate (int no)
             //  {
             //      return (no % 2 == 0);
-            //  };
-            //Predicate<int> predicate = new Predicate<int>(func);
-            //List<int> result = list.FindAll(predicate);
+            //  }
+            //);
+
+            // Func
+            Func<int, bool> func = delegate (int no)
+              {
+                  return (no % 2 == 0);
+              };
+            Predicate<int> predicate = new Predicate<int>(func);
+            List<int> result = list.FindAll(predicate);
 
             // lambda, lambda expression, arrow functions
             result = list.FindAll(i => i % 2 == 0);
@@ -81,7 +81,7 @@ namespace session_09
 
             // Actions
             Action<int, int> myAction = ActionMethod;
-            Action<int, int> myAction2 = (i, j) =>
+            Action<int, int> myAction2 = (int i, int j) =>
             {
                 //ActionMethod(i, j);
             };

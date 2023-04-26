@@ -14,12 +14,12 @@ namespace session_09
             // Create an array of Car objects.
             Car[] arrayOfCars = new Car[6]
             {
-             new Car("Ford",1992),
-             new Car("Fiat",1988),
-             new Car("Buick",1932),
-             new Car("Ford",1932),
-             new Car("Dodge",1999),
-             new Car("Honda",1977)
+                new Car("Ford",1992),
+                new Car("Fiat",1988),
+                new Car("Buick",1932),
+                new Car("Ford",1932),
+                new Car("Dodge",1999),
+                new Car("Honda",1977)
             };
 
             // Write out a header for the output.

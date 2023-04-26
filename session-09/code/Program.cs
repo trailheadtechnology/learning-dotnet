@@ -10,7 +10,11 @@ namespace session_09
     {
         static void Main(string[] args)
         {
-            Delegates.EventHandlerExample();
+            //Delegates.EventHandlerExample();
+            //IComparerExample.Example();
+            //ReflectionExample.Example(new AttributesExample());
+
+            ApplicationConfig.Example();
             Console.ReadKey();
         }
     }

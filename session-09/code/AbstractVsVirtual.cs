@@ -33,7 +33,7 @@ namespace session_09
 
         public override decimal InterestPerMonth(decimal amount)
         {
-            return amount * 14 / 100;
+            return base.InterestPerMonth(amount) * 2;
         }
     }
 }

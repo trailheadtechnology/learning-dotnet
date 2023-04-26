@@ -7,8 +7,12 @@ namespace session_09
     [Author("Another Developer", version = 1.1)]
     public class AttributesExample
     {
+        public void Example()
+        {
+
+        }
         //[ApplySecurity()]
-        //[ApplyValidation()]
+        //[ApplyValidation(new MyValidationRulesClass())]
         //public static void Endpoint(object obj)
         //{
         //    //todo

@@ -11,7 +11,7 @@ namespace session_09
                 new Person { Age = 22, Name="Younger" }
             };
 
-            people.Sort(new AgeComparer());
+            people.Sort(new AgeComparer(false));
         }
     }
 
@@ -23,9 +23,19 @@ namespace session_09
 
     class AgeComparer : IComparer<Person>
     {
+        private bool _asc;
+
+        public AgeComparer(bool Asc)
+        {
+            _asc = Asc;
+        }
+
         public int Compare(Person x, Person y)
         {
-            return x.Age - y.Age;
+            if (_asc)
+                return x.Age - y.Age;
+
+            return y.Age - x.Age;
         }
     }
 }

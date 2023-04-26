@@ -24,11 +24,11 @@ namespace session_09
         public static void Example()
         {
             int[] nums = new int[] { 2, 0, 1 };
-            
+
             // query syntax
-            var results = from a in nums 
-                          where a < 3 
-                          orderby a 
+            var results = from a in nums
+                          where a < 3
+                          orderby a
                           select a;
 
             // method syntax
@@ -50,7 +50,7 @@ namespace session_09
 
             // Multiple Select and where operator
             var studentNames = studentList
-                                  .Where(s => s.Age > 18)
+                                  .Where(s => s.Age > 18 && s.StudentName.Length > 0)
                                   .Select(s => s)
                                   .Where(st => st.StandardID > 0)
                                   .Select(s => s.StudentName);
@@ -65,11 +65,11 @@ namespace session_09
             var studentsGroupByStandard = from s in studentList
                                           group s by s.StandardID into sg
                                           orderby sg.Key
-                                          select new { sg.Key, TotalAge = sg.Sum(s => s.Age) };
+                                          select new { StandardID = sg.Key, TotalAge = sg.Sum(s => s.Age) };
 
             //foreach (var group in studentsGroupByStandard)
             //{
-            //    Console.WriteLine("StandardID {0}:", group.Key);
+            //    Console.WriteLine("StandardID {0}:", group.StandardID);
             //    group.sg.ToList().ForEach(st => Console.WriteLine(st.StudentName));
             //}
 
