@@ -1,5 +1,4 @@
-﻿using session_11.Data;
-using System;
+﻿using System;
 
 namespace session_11
 {
@@ -7,7 +6,7 @@ namespace session_11
     {
         public static void Example()
         {
-            using (var context = new AdventureWorksContext())
+            using (var context = new AdventureWorksEntities())
             {
                 var cust = new Customer
                 {
@@ -19,11 +18,11 @@ namespace session_11
                     ModifiedDate = DateTime.Now,
                 };
                 context.Customers.Add(cust);
-                Console.WriteLine($"New Customer ID {cust.CustomerId}");
+                Console.WriteLine($"New Customer ID {cust.CustomerID}");
                 Console.ReadKey();
 
                 var effected = context.SaveChanges();
-                Console.WriteLine($"{effected} rows created; New Customer ID {cust.CustomerId}");
+                Console.WriteLine($"{effected} rows created; New Customer ID {cust.CustomerID}");
                 Console.ReadKey();
             }
         }

@@ -1,5 +1,4 @@
-﻿using session_11.Data;
-using System;
+﻿using System;
 using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
@@ -10,10 +9,10 @@ namespace session_11
     {
         public static void Example()
         {
-            using (var context = new AdventureWorksContext())
+            using (var context = new AdventureWorksEntities())
             {
-                //context.Database.Log = s => Debug.WriteLine(s);
-                //context.Configuration.LazyLoadingEnabled = false;
+                context.Database.Log = s => Debug.WriteLine(s);
+                context.Configuration.LazyLoadingEnabled = false;
 
                 //// BEWARE of LazyLoading
                 //var query = from customer in context.Customers
@@ -30,7 +29,7 @@ namespace session_11
 
                 foreach (var cust2 in query)
                 {
-                    Console.WriteLine($"{cust2.CustomerId} {cust2.FirstName} {cust2.LastName}");
+                    Console.WriteLine($"{cust2.CustomerID} {cust2.FirstName} {cust2.LastName}");
                     foreach (var address in cust2.CustomerAddresses)
                     {
                         Console.WriteLine($"     {address.Address.AddressLine1} {address.Address.StateProvince} {address.Address.CountryRegion}");

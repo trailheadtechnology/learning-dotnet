@@ -32,7 +32,7 @@ namespace session_10
                           select a;
 
             // method syntax
-            var results2 = nums.Where(a => a < 3).OrderBy(a => a).Select(a => a);
+            var results2 = nums.Where(a => a < 3).OrderBy(b => b).Select(a => a);
 
             var studentList = new List<Student>() {
                 new Student() { StudentID = 1, StudentName = "John", Age = 18, StandardID = 1 } ,
@@ -136,6 +136,10 @@ namespace session_10
             // "eager" evaluation
             List<Student> oddStudents = studentList
                 .Where(s => s.StudentID % 2 != 0)
+                //.Where(delegate (Student s) 
+                //{ 
+                //    return s.StudentID % 2 != 0; 
+                //})
                 .Select(s => s)
                 .ToList();
             oddStudents = (from s in studentList

@@ -9,8 +9,8 @@ namespace session_10
             bool isEqual = false;
 
             isEqual = EqualsComparison.AreEqual(10, 20);
-            //isEqual = EqualsComparison.AreEqual("ABC", "ABC");
-            //isEqual = EqualsComparison.AreEqual(10.5, 20.5);
+            isEqual = EqualsComparison.AreEqual("ABC", "ABC");
+            isEqual = EqualsComparison.AreEqual(10.5, 20.5);
             Console.WriteLine(isEqual ? "Both are Equal" : "Both are Not Equal");
             Console.ReadKey();
 
@@ -21,7 +21,7 @@ namespace session_10
 
             ////class
             //NodeList<string> nodesOfString = new NodeList<string>();        // string is a reference type
-            //NodeList<Employee> nodesOfEmployee = new NodeList<Employee>();  // Employee is a reference type
+            //var nodesOfEmployee = new NodeList<Employee>();  // Employee is a reference type
             //NodeList<int> nodesOfAction = new NodeList<int>();    //int is not a reference type
 
             ////new
@@ -65,6 +65,7 @@ namespace session_10
     public class Employee : BaseEmployee
     {
         public Employee() { }
+        public Employee(int i) { }
     }
 
     public class Customer

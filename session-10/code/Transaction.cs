@@ -14,7 +14,7 @@ namespace session_10
             {
                 Console.WriteLine("Before Transaction");
                 GetQuantities();
-                QuantityTransfer2();
+                QuantityTransferTxScope();
                 Console.WriteLine("After Transaction");
                 GetQuantities();
             }
@@ -39,11 +39,13 @@ namespace session_10
                 {
                     // Associate the first update command with the transaction
                     SqlCommand cmd = new SqlCommand("UPDATE SalesLT.SalesOrderDetail SET OrderQty = OrderQty + 1 WHERE SalesOrderID = 71780 AND ProductID = 905", cn, tx);
-                    cmd.ExecuteNonQuery();
+                    var odRows = cmd.ExecuteNonQuery();
 
                     // Associate the second update command with the transaction
                     cmd = new SqlCommand("UPDATE SalesLT.Product SET QtyOnHand = QtyOnHand - 1 WHERE ProductID = 905", cn, tx);
-                    cmd.ExecuteNonQuery();
+                    var pRows = cmd.ExecuteNonQuery();
+
+                    if (odRows == 0 || pRows == 0) throw new Exception("Either the product or orderdetail was missing");
 
                     // If everything goes well then commit the transaction
                     tx.Commit();
@@ -58,7 +60,7 @@ namespace session_10
             }
         }
 
-        private static void QuantityTransfer2()
+        private static void QuantityTransferTxScope()
         {
             using (TransactionScope scope = new TransactionScope())
             {
@@ -100,7 +102,7 @@ namespace session_10
                     {
                         while (dr.Read())
                         {
-                            Console.WriteLine(dr["SalesOrderID"] + ",  " + dr["OrderQty"] + ",  " + dr["UnitPrice"]);
+                            Console.WriteLine($"{dr["SalesOrderID"]}, {dr["OrderQty"]}, {dr["UnitPrice"]}");
                         }
                     }
                 }
@@ -111,7 +113,7 @@ namespace session_10
                     {
                         while (dr.Read())
                         {
-                            Console.WriteLine(dr["ProductID"] + ",  " + dr["QtyOnHand"]);
+                            Console.WriteLine($"{dr["ProductID"]}, {dr["QtyOnHand"]}");
                         }
                     }
                 }

@@ -23,9 +23,13 @@ namespace session_09
 
         public static void Example()
         {
+            var envName = "Development";
+
             // load the configuration file.
-            var configBuilder = new ConfigurationBuilder().
-               AddJsonFile("appsettings.json")
+            var configBuilder = new ConfigurationBuilder()
+               .AddJsonFile("appsettings.json")
+               //.AddJsonFile($"appsettings.{envName}.json")
+               //...environment variables, key vault in AWS or Azure
                .Build();
 
             // get the section to read
@@ -34,6 +38,8 @@ namespace session_09
             // get the configuration values in the section.
             var client_id = configSection["client_id"] ?? null;
             var client_secret = configSection["client_secret"] ?? null;
+
+            Console.WriteLine($"{client_id} {client_secret}");
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using session_11.Data;
-using System;
+﻿using System;
 using System.Linq;
 
 namespace session_11
@@ -8,11 +7,11 @@ namespace session_11
     {
         public static void Example()
         {
-            using (var context = new AdventureWorksContext())
+            using (var context = new AdventureWorksEntities())
             {
                 // update single
                 var cust = context.Customers
-                    .Where(c => c.CustomerId == 1)
+                    .Where(c => c.CustomerID == 1)
                     .FirstOrDefault();
 
                 //// skip and take
@@ -26,13 +25,13 @@ namespace session_11
                 //    }
                 //}
 
-                Console.WriteLine($"{cust.CustomerId} {cust.FirstName} {cust.LastName}");
+                Console.WriteLine($"{cust.CustomerID} {cust.FirstName} {cust.LastName}");
                 Console.ReadKey();
 
                 cust.FirstName += "1";
                 //// SAME AS:
                 // cust.FirstName = cust.FirstName + "1";
-                Console.WriteLine($"{cust.CustomerId} {cust.FirstName} {cust.LastName}");
+                Console.WriteLine($"{cust.CustomerID} {cust.FirstName} {cust.LastName}");
                 
                 var effected = context.SaveChanges();
                 Console.WriteLine($"{effected} rows updated");

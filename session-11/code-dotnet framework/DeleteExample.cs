@@ -1,5 +1,4 @@
-﻿using session_11.Data;
-using System;
+﻿using System;
 using System.Linq;
 
 namespace session_11
@@ -8,7 +7,7 @@ namespace session_11
     {
         public static void Example()
         {
-            using (var context = new AdventureWorksContext())
+            using (var context = new AdventureWorksEntities())
             {
                 var query = from customer in context.Customers
                             where customer.FirstName == "First" && customer.LastName == "Last"

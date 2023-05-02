@@ -1,5 +1,4 @@
-﻿using session_11.Data;
-using System;
+﻿using System;
 using System.Linq;
 
 namespace session_11
@@ -8,18 +7,18 @@ namespace session_11
     {
         public static void Example()
         {
-            using (var context = new AdventureWorksContext())
+            using (var context = new AdventureWorksEntities())
             {
                 // CHANGE TRACKING
                 //context.Configuration.AutoDetectChangesEnabled = false;
 
                 // method syntax
                 var cust = context.Customers
-                            .FirstOrDefault(c => c.CustomerId == 1);
+                            .FirstOrDefault(c => c.CustomerID == 1);
                     //.Where(c => c.CustomerID == 1)
                     //.FirstOrDefault();
 
-                Console.WriteLine($"{cust.CustomerId} {cust.FirstName} {cust.LastName}");
+                Console.WriteLine($"{cust.CustomerID} {cust.FirstName} {cust.LastName}");
                 Console.ReadKey();
 
                 // query syntax
@@ -33,7 +32,7 @@ namespace session_11
 
                 foreach (var cust2 in query) // IQueryable vs IEnumerable
                 {
-                    Console.WriteLine($"{cust2.CustomerId} {cust2.FirstName} {cust2.LastName}");
+                    Console.WriteLine($"{cust2.CustomerID} {cust2.FirstName} {cust2.LastName}");
                 }
                 Console.ReadKey();
             }
