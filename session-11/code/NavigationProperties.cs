@@ -1,6 +1,6 @@
-﻿using session_11.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using session_11.Data;
 using System;
-using System.Data.Entity;
 using System.Diagnostics;
 using System.Linq;
 
@@ -22,11 +22,12 @@ namespace session_11
 
                 // No Lazy Loading
                 var query = context.Customers
+                    .Include(cust => cust.CustomerAddresses).ThenInclude(ca => ca.Address)
+                    //.Include("CustomerAddresses.Address")
                     .Where(customer =>
                         customer.CustomerAddresses
                         .Any(ca => ca.Address.StateProvince == "Washington"))
-                    //.Include(cust => cust.CustomerAddresses.Select(ca => ca.Address));
-                    .Include("CustomerAddresses.Address");
+                    ;
 
                 foreach (var cust2 in query)
                 {

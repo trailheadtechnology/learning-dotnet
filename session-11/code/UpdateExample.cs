@@ -1,4 +1,5 @@
-﻿using session_11.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using session_11.Data;
 using System;
 using System.Linq;
 
@@ -12,8 +13,7 @@ namespace session_11
             {
                 // update single
                 var cust = context.Customers
-                    .Where(c => c.CustomerId == 1)
-                    .FirstOrDefault();
+                    .FirstOrDefault(c => c.CustomerId == 1);
 
                 //// skip and take
                 //var customers = context.Customers.OrderBy(i => i.CustomerID); //.ToList();
@@ -57,6 +57,7 @@ namespace session_11
                         addr.CountryRegion = "United States";
                     }
                 }
+                
                 effected = context.SaveChanges();
                 Console.WriteLine($"{effected} rows updated");
                 Console.ReadKey();

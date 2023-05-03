@@ -14,7 +14,9 @@ namespace session_11
                             where customer.FirstName == "First" && customer.LastName == "Last"
                             select customer;
 
-                context.Customers.RemoveRange(query.ToList());
+                var customersToDelete = query.ToList();
+                
+                context.Customers.RemoveRange(customersToDelete);
                 var effected = context.SaveChanges();
                 Console.WriteLine($"{effected} rows deleted");
                 Console.ReadKey();

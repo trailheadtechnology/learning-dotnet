@@ -51,8 +51,9 @@ public partial class AdventureWorksContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder
         .UseSqlServer("data source=(LocalDb)\\MSSQLLocalDB;initial catalog=AdventureWorks;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-        //.UseLazyLoadingProxies()
-        //.LogTo(message => Debug.WriteLine(message))
+        //.UseChangeTrackingProxies(false)
+        //.UseLazyLoadingProxies(true)
+        .LogTo(message => Debug.WriteLine(message))
         ;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
