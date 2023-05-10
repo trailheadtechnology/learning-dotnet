@@ -1,4 +1,5 @@
-﻿using assignment_11_solution.Data;
+﻿//using assignment_11_solution.Data;
+using assignment_11_solution.Data;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
@@ -25,9 +26,9 @@ todo incomplete ""item name""");
         {
             int changes = 0;
 
-            using (var ctx = new ToDoEntities())
+            using (var ctx = new ToDoContext())
             {
-                ctx.ToDoes.Add(new ToDo { Description = description });
+                ctx.ToDos.Add(new ToDo { Description = description });
 
                 try
                 {
@@ -54,9 +55,9 @@ todo incomplete ""item name""");
         {
             int changes = 0;
 
-            using (var ctx = new ToDoEntities())
+            using (var ctx = new ToDoContext())
             {
-                var todo = ctx.ToDoes
+                var todo = ctx.ToDos
                     .FirstOrDefault(t => t.Description == description && !t.IsComplete);
                 if (todo != null) todo.IsComplete = true;
                 changes = ctx.SaveChanges();
@@ -71,9 +72,9 @@ todo incomplete ""item name""");
         {
             int changes = 0;
 
-            using (var ctx = new ToDoEntities())
+            using (var ctx = new ToDoContext())
             {
-                var todo = ctx.ToDoes
+                var todo = ctx.ToDos
                     .FirstOrDefault(t => t.Description == description && t.IsComplete);
                 if (todo != null) todo.IsComplete = true;
                 changes = ctx.SaveChanges();
@@ -87,9 +88,9 @@ todo incomplete ""item name""");
         public static string List()
         {
             var sb = new StringBuilder();
-            using (var ctx = new ToDoEntities())
+            using (var ctx = new ToDoContext())
             {
-                var incompleteItems = ctx.ToDoes.ToList();
+                var incompleteItems = ctx.ToDos.ToList();
                 foreach (var item in incompleteItems)
                 {
                     sb.AppendLine($"{(item.IsComplete ? "x" : "-")} {item.Description}");
